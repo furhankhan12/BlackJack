@@ -1,0 +1,81 @@
+*, *::after, *::before { 
+  box-sizing: border-box;
+}
+body{
+  background-color: slateblue;
+}
+.card {
+    position: relative;
+    height: 100%;
+    width: 168px;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background-color: white;
+  }
+  
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+
+.cardContainer{
+    height: 10rem;
+    display : flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow-anchor: row;
+}
+.card::before,
+.card::after {
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1rem;
+}
+
+.card::before {
+  top: .5rem;
+  left: .5rem
+}
+
+.card::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.hitButton{
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  background-color: green;
+}
+
+.stayButton{
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  background-color: red;
+}
+.header{
+  text-align: center;
+  color: white;
+}
+.textBox{
+  text-align: center;
+  color: white;
+}
